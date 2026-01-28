@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「3-------3」</title>
+    <style>
+        /* 全局样式重置与基础设置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            padding: 1rem 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #165DFF;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            font-size: 1rem;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #165DFF;
+        }
+
+        /* 英雄区样式 */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #E8F4FF 0%, #D1E9FF 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 70px; /* 避开固定导航栏 */
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            color: #165DFF;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #165DFF;
+            color: #ffffff;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0E4BDB;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(22, 93, 255, 0.3);
+        }
+
+        /* 内容卡片区样式 */
+        .cards-section {
+            padding: 8rem 0;
+            background-color: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #165DFF;
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: #f8fafc;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(22, 93, 255, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: #165DFF;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .card-desc {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background-color: #165DFF;
+            color: #ffffff;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-top: 1rem;
+            opacity: 0.8;
+        }
+
+        /* 响应式适配（移动端） */
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cards-section {
+                padding: 5rem 0;
+            }
+        }
+    </style>
+    <!-- 引入图标库（增强美观度） -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">DemoPage</a>
+             <a href="https://space.bilibili.com/1443193042">B站</a>
+            <ul class="nav-menu">
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>欢迎来到我的网站！</h1>
+            <p>作者：错误符号1002</p>
+            <a href="#features" class="btn"></a>
+        </div>
+    </div>
+
+    <!-- 卡片内容区 -->
+    <section class="cards-section" id="features">
+        <div class="container">
+            <h2 class="section-title">LLL</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="card-title">LLL</h3>
+                    <p class="card-desc">LLL</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="card-title">LLL</h3>
+                    <p class="card-desc">LLL</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="card-title">LLL</h3>
+                    <p class="card-desc">LLL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <h3>DemoPage © 2025 - 2026     错误符号1002（Error1002）</h3>
+            <p>LLLLL 666</p>
+        </div>
+    </footer>
+</body>
+</html>
