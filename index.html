@@ -1,21 +1,105 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>欢迎来到我的网站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>错误符号1002 的 网站</title>
+    <!-- 引入Tailwind CSS，用于快速实现美观样式，无需本地配置 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标，增强按钮视觉效果 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- 自定义Tailwind配置，统一主题色 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36BFFA',
+                        accent: '#722ED1',
+                        neutral: '#1F2937',
+                        light: '#F9FAFB',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义额外样式，增强按钮交互和页面布局 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .btn-hover {
+                @apply transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg;
+            }
+            .page-container {
+                @apply min-h-screen bg-gradient-to-br from-light to-gray-100 flex flex-col items-center justify-center py-10 px-4;
+            }
+            .btn-container {
+                @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mt-8;
+            }
+            .nav-btn {
+                @apply btn-hover py-4 px-8 rounded-xl font-inter font-medium text-lg flex items-center justify-center gap-3 shadow-md;
+            }
+        }
+    </style>
 </head>
-<body>
-<h1>欢迎来到我的主页！</h1>
-<p>作者：错误符号1002(bilibili)</p>
-<a href="https://wwalv.lanzouu.com/b01883boif">    了解我的材质包（new）(密码:123)</a>
-<a href="https://wwp.lanzouo.com/b016kaw8hg">    了解我的材质包（old）(密码:wt12)</a>
-<a href="https://www.ilanzou.com/s/LTbnGRIf?code">    了解我的材质包（外链特供版）(密码:HAHA)</a>
-<a href="https://opll96.github.io/1020.html">    ColorEgg</a>
-<a href="https://space.bilibili.com/1443193042">    了解我-_-</a>
-<a href="https://opll96.github.io/mc.html">        《我的世界》启动器（只有大众，不含小众）</a>
-<a href="https://opll96.github.io/1.html">        《我的世界》材质包 - 教程Aaaaaaaaaaaaaa</a>
-<a href="https://opll96.github.io/2.html">        《我的世界》材质包 - 链接（直接下载版）Aaaaaaaaaaaaaa</a>
-<a href="https://opll96.github.io/3.html">     我的网站（新概念版）</a>
+<body class="font-inter">
+    <!-- 页面主体容器 -->
+    <div class="page-container">
+        <!-- 页面标题 -->
+        <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold text-neutral mb-4 text-center">
+            欢迎来到我的网站！
+        </h1>
+        <p class="text-gray-600 text-lg mb-10 text-center max-w-2xl">
+            LLL 666
+        </p>
+        
+        <!-- 按钮容器（7个按钮） -->
+        <div class="btn-container">
+            <!-- 按钮1：可修改href为目标超链接 -->
+            <a href="https://wwalv.lanzouu.com/b01883boif" target="_blank" class="nav-btn bg-primary text-white">
+                <i class="fas fa-search"></i> 我的材质包（new）
+            </a>
+            
+            <!-- 按钮2 -->
+            <a href="https://opll96.github.io/1020.html" target="_blank" class="nav-btn bg-secondary text-white">
+                <i class="fas fa-envelope"></i> CAI DAN
+            </a>
+            
+            <!-- 按钮3 -->
+            <a href="https://space.bilibili.com/1443193042" target="_blank" class="nav-btn bg-accent text-white">
+                <i class="fas fa-file-alt"></i> 我的哔哩哔哩主页
+            </a>
+            
+            <!-- 按钮4 -->
+            <a href="https://opll96.github.io/mc.html" target="_blank" class="nav-btn bg-emerald-500 text-white">
+                <i class="fas fa-file-alt"></i> 《我的世界》启动器
+            </a>
+            
+            <!-- 按钮5 -->
+            <a href="https://www.ilanzou.com/s/LTbnGRIf?code" target="_blank" class="nav-btn bg-orange-500 text-white">
+                <i class="fas fa-file-alt"></i> 我的材质包（外链特供版）
+            </a>
+
+            <!-- 按钮6 -->
+            <a href="https://opll96.github.io/1.html" target="_blank" class="nav-btn bg-neutral text-white">
+                <i class="fas fa-code"></i> 我的世界 材质包 - 教程
+            </a>
+
+            <!-- 按钮6 -->
+            <a href="https://opll96.github.io/2.html" target="_blank" class="nav-btn bg-neutral text-white">
+                <i class="fas fa-code"></i> 我的世界 材质包 - 链接（直接下载版）Aaaaaaaaaaaaaa
+            </a>
+            
+            <!-- 按钮7（跨列居中，提升美观度） -->
+            <a href="https://opll96.github.io/3.html" target="_blank" class="nav-btn bg-red-500 text-white sm:col-span-2 md:col-span-3 lg:col-span-4">
+                <i class="fas fa-question-circle"></i> 我  的 （新）网  站
+            </a>
+        </div>
+    </div>
 </body>
 </html>
