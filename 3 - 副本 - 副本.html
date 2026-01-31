@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>错误符号1002 的 网站</title>
+    <!-- 引入Tailwind CSS，用于快速实现美观样式，无需本地配置 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标，增强按钮视觉效果 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- 自定义Tailwind配置，统一主题色 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36BFFA',
+                        accent: '#722ED1',
+                        neutral: '#1F2937',
+                        light: '#F9FAFB',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义额外样式，增强按钮交互和页面布局 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .btn-hover {
+                @apply transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg;
+            }
+            .page-container {
+                @apply min-h-screen bg-gradient-to-br from-light to-gray-100 flex flex-col items-center justify-center py-10 px-4;
+            }
+            .btn-container {
+                @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mt-8;
+            }
+            .nav-btn {
+                @apply btn-hover py-4 px-8 rounded-xl font-inter font-medium text-lg flex items-center justify-center gap-3 shadow-md;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter">
+    <!-- 页面主体容器 -->
+    <div class="page-container">
+        <!-- 页面标题 -->
+        <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold text-neutral mb-4 text-center">
+            欢迎来到我的网站！
+        </h1>
+        <p class="text-gray-600 text-lg mb-10 text-center max-w-2xl">
+            作者：错误符号1002（哔哩哔哩）
+        </p>
+        
+        <!-- 按钮容器（1个按钮） -->
+        <div class="btn-container">
+            <!-- 按钮1：可修改href为目标超链接 -->
+            <a href="https://wwalv.lanzouu.com/iYKDb3hgc27i" target="_blank" class="nav-btn bg-primary text-white">
+                <i class="fas fa-search"></i> 我的DLfanmode
+            </a>
+
+            </a>
+        </div>
+    </div>
+</body>
+</html>
